@@ -39,6 +39,20 @@
                 padding: 0px;
                 border: 0px;
             }
+
+            /* 모바일 맞춤: 1080x1920 캔버스를 화면에 9:16 비율로 축소·중앙 배치 */
+            html, body { height: 100%; }
+            body {
+                background: #161120;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+            }
+            #canvas {
+                width:  min(100vw, calc(100vh * 0.5625));
+                height: min(100vh, calc(100vw * 1.7778));
+            }
             :-webkit-full-screen #canvas {
                 width: 100%;
                 height: 100%;
